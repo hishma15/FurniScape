@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@config  "../../tailwind.config.js";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lustria&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer components{
+
+    .furniscape-advantage-box{
+
+        /* @apply flex flex-col items-start p-4 rounded-lg bg-beige text-black; */
+        /* font-family: 'Montserrat', sans-serif;  */  
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #F5F5F3;
+        /* background-color: aquamarine; */
+        color: #3B3937;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+
+        width: 280px;
+        height: 100px;
+        gap: 8px; /*space between icon and text*/
+        /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+        /*Animation*/
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.195);
+        transition: all 300ms ease-in-out;
+        /* transition: transform 300ms ease, box-shadow 300ms ease; */
+        transform-origin: center;
+
+    }
+
+    .furniscape-advantage-box:hover{
+        transform: scale(1.03) translateY(-4px);
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        background-color: #ecebe7;
+    }
+
+    .heading-style{
+        @apply text-center text-black text-3xl pt-4;
+        font-family: 'Lustria', serif;
+    }
+
+    .admin-button{
+        @apply bg-brown text-beige hover:bg-btn-hover-brown text-3xl py-8 rounded shadow text-center;
+        font-family: 'Montserrat', sans-serif;
+        /* background-color: #967F71;
+        font-family: 'Montserrat', 'sans-serif';
+        color: #F5F5F3;
+         */
+        
+    }
+
+    .admin-sidemenu{
+        @apply flex items-center gap-3 bg-brown p-4 hover:bg-btn-hover-brown;
+    }
+
+    .home-category{
+        @apply flex-shrink-0 w-72 text-center bg-beige rounded-full;
+    }
+
+    .home-category-img{
+        @apply w-72 h-36 object-cover rounded-full mb-4;
+        
+    }
+
+    .home-category-img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0%);
+    }
+
+    .home-category-name{
+        @apply text-xl font-medium flex justify-center;
+        font-family: 'Lustria', serif;
+    }
+
+    .product-div{
+        @apply bg-beige p-6 m-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-xl rounded-lg;
+    }
+
+    .product-img {
+        @apply w-full h-48 object-contain rounded-lg;
+    }
+
+    .product-name{
+        @apply tracking-wide font-semibold text-black text-center m-2;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+    .product-price {
+        @apply text-black font-medium mb-4;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .product-div-btn {
+        @apply flex flex-row items-center gap-4;
+    }
+
+    .product-view-btn {
+        @apply bg-brown font-semibold text-beige p-3.5 rounded-full cursor-pointer hover:bg-btn-hover-brown transform transition duration-200 hover:scale-110 active:scale-95;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .product-addtocart-btn {
+        @apply bg-brown text-beige p-3.5 rounded-full cursor-pointer hover:bg-btn-hover-brown transform transition duration-200 hover:scale-110;
+    }
+
+    /* ///////////////////////////////////////////////////// */
+
+    .admin-input{
+        @apply border border-black rounded-full py-1 px-9 ml-2 mr-2 w-full mt-3 mb-3;
+    }
+
+    .admin-input-table{
+        @apply py-1 ml-2 mr-2 rounded-full;
+    }
+
+    .furniscape-advantage-box i{
+        padding: 10px;
+        background-color: #967F71;
+        border-radius: 100%;
+        color: #F5F5F3;
+
+    }
+
+    .action-section{
+        @apply bg-beige mt-5 flex md:flex-row flex-col md:h-56 mb-7;
+    }
+
+    .action-img{
+        @apply md:w-3/7 w-full h-56;
+    }
+
+    .action-div{
+        @apply flex flex-col justify-center items-center p-6 mb-7;
+    }
+
+    .action-p{
+        @apply text-black text-2xl text-center m-2 p-2;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .action-a{
+        @apply bg-brown text-2xl text-beige font-semibold py-3.5 px-7 rounded-full cursor-pointer hover:bg-btn-hover-brown;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .image-gallery-animation{
+        @apply transform transition duration-300 ease-in-out hover:scale-105 cursor-pointer rounded-lg shadow-md;
+    }
+
+    #flash-success, #flash-error {
+    transition: opacity 0.5s ease-out;
+}
+
+
+
+}
+
